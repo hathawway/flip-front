@@ -1,0 +1,14 @@
+<div class="container">
+
+    <button type="button" (click)="flipAll(cardsService.cards)">Перевернуть все</button>
+    
+    <div class="container-card">
+        <app-card-item-one
+            *ngFor="let c of cardsService.cards"
+            [card]="c"
+            (delete)="delCard($event)"
+            (flip)="flipCard($event)"
+        ></app-card-item-one>
+    </div>
+    
+</div>

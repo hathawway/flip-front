@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="title"><b>Добавление карточки</b></div>
+
+    <form class="form-add" 
+    [formGroup]="form" 
+    (submit)="submit()"
+    >
+        <input class="form-fild"
+        formControlName="title" 
+        placeholder="Название"
+        >
+        <textarea  class="form-fild"
+        formControlName="description" 
+        placeholder="Описание"
+        >
+        </textarea>
+        <button type="submit" 
+        [disabled]="form.invalid"
+        >
+        Добавить
+        </button>
+    </form>
+</div>
