@@ -1,0 +1,28 @@
+<div class="scene">
+    <div class="card {{ card.flip }}" id="{{ card.id }}" (click)="onFlip()">
+
+      <div class="card__face card__face--front">
+        <div class="item item_front">
+            <div class="item-content">
+                <div class="close" (click)="onClick()"></div>
+                <div class="name">{{ card.title }}</div>
+            </div>
+        </div>
+      </div>
+
+      <div class="card__face card__face--back">
+        <div class="item item_back">
+            <div class="item-content">
+                <div class="close" (click)="onClick()"></div>
+                <div class="name">{{ card.title }}</div>
+                <div class="description">
+                  {{ card.description }}
+                </div>
+            </div>
+        </div>
+      </div>
+
+    </div>
+</div>
+
+
